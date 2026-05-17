@@ -25,7 +25,7 @@ def edit_profile(request):
             return redirect('blog:profile', username=user.username)
     else:
         form = ProfileEditForm(instance=user)
-    return render(request, 'user.html', {'form': form})
+    return render(request, 'blog/user.html', {'form': form})
 
 
 def profile(request, username):
